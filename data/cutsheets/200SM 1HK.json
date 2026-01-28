@@ -1,0 +1,146 @@
+{
+  "cutsheet": {
+    "file_name": "200SM 1HK.pdf",
+    "file_type": "pdf",
+    "material_hint": "SM",
+    "product": "200SM",
+    "run_number": "1",
+    "source_pdf": "samples/200SM 1HK.pdf",
+    "station_code": "HK"
+  },
+  "extracted_text_excerpt": "#\nFile Name\nRun Time\nx x\nLength Width Thickness\n# PcsPart #\nDate & Time\nNotes\nUser data 3\nWeight Dimensions\nMaterial\n09:22:50.001/31/2025\n00:26:09.90\nSS200 SpaceMaker\n200SM 1HK 12 GA 5'x10'\n120 60 0.109\nMakes 4 Frames\nFR-200215 5.947 3.125 x 60.258\nFR-20615 Fill Scale2 3.047 3.125 x 31.54\nFR-206153 3.102 3.125 x 31.512\nFR-200236 3.218 3 x 348\nFR-206141 3.143 3.5 x 28.758\nFR-201577 0.574 6.875 x 416\nFR-20469Z9 0.9 1 x 28.758\nFR-200338 1.429 3.25 x 148\nFR-206134 3.15 3.5 x 28.758\n1\n1\n1\n11\n1\n1\n1\n4\n4\n4\n4\n4\n4\n4",
+  "parsed_from_pdf": {
+    "gauge": "12",
+    "sheet_size_ft": {
+      "length": 10.0,
+      "width": 5.0
+    }
+  },
+  "parts": [
+    {
+      "details": "5.947 3.125 x 60.258",
+      "dimensions_in": {
+        "length": 3.125,
+        "width": 60.258
+      },
+      "part_number": "FR-200215",
+      "source": "line_scan",
+      "weight_lb": 5.947
+    },
+    {
+      "details": "Fill Scale2 3.047 3.125 x 31.54",
+      "dimensions_in": {
+        "length": 3.125,
+        "width": 31.54
+      },
+      "part_number": "FR-20615",
+      "source": "line_scan",
+      "weight_lb": 3.047
+    },
+    {
+      "details": "3.102 3.125 x 31.512",
+      "dimensions_in": {
+        "length": 3.125,
+        "width": 31.512
+      },
+      "part_number": "FR-206153",
+      "source": "line_scan",
+      "weight_lb": 3.102
+    },
+    {
+      "details": "3.218 3 x 348",
+      "dimensions_in": {
+        "length": 3.0,
+        "width": 348.0
+      },
+      "part_number": "FR-200236",
+      "source": "line_scan",
+      "weight_lb": 3.218
+    },
+    {
+      "details": "3.143 3.5 x 28.758",
+      "dimensions_in": {
+        "length": 3.5,
+        "width": 28.758
+      },
+      "part_number": "FR-206141",
+      "source": "line_scan",
+      "weight_lb": 3.143
+    },
+    {
+      "details": "0.574 6.875 x 416",
+      "dimensions_in": {
+        "length": 6.875,
+        "width": 416.0
+      },
+      "part_number": "FR-201577",
+      "source": "line_scan",
+      "weight_lb": 0.574
+    },
+    {
+      "details": "0.9 1 x 28.758",
+      "dimensions_in": {
+        "length": 1.0,
+        "width": 28.758
+      },
+      "part_number": "FR-20469Z9",
+      "source": "line_scan",
+      "weight_lb": 0.9
+    },
+    {
+      "details": "1.429 3.25 x 148",
+      "dimensions_in": {
+        "length": 3.25,
+        "width": 148.0
+      },
+      "part_number": "FR-200338",
+      "source": "line_scan",
+      "weight_lb": 1.429
+    },
+    {
+      "details": "3.15 3.5 x 28.758",
+      "dimensions_in": {
+        "length": 3.5,
+        "width": 28.758
+      },
+      "part_number": "FR-206134",
+      "source": "line_scan",
+      "weight_lb": 3.15
+    },
+    {
+      "details": "200 Gal SM Frame Bend Instructions",
+      "dimensions_in": null,
+      "part_number": "FR-1200SM",
+      "source": "line_scan",
+      "weight_lb": null
+    },
+    {
+      "details": "3",
+      "dimensions_in": null,
+      "part_number": "FR-20021",
+      "source": "line_scan",
+      "weight_lb": null
+    },
+    {
+      "details": "3",
+      "dimensions_in": null,
+      "part_number": "FR-20615",
+      "source": "line_scan",
+      "weight_lb": null
+    }
+  ],
+  "related_files": [
+    {
+      "extension": "pdf",
+      "path": "samples/200SM - 1WJ.pdf",
+      "relation": "same_product",
+      "station_code": "WJ"
+    },
+    {
+      "extension": "mpf",
+      "path": "samples/200SM 1HK.MPF",
+      "relation": "same_station",
+      "station_code": "HK"
+    }
+  ]
+}

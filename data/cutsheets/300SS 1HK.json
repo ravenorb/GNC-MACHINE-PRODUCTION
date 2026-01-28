@@ -1,0 +1,140 @@
+{
+  "cutsheet": {
+    "file_name": "300SS 1HK.pdf",
+    "file_type": "pdf",
+    "material_hint": "SS",
+    "product": "300SS",
+    "run_number": "1",
+    "source_pdf": "samples/300SS 1HK.pdf",
+    "station_code": "HK"
+  },
+  "extracted_text_excerpt": "#\nFile Name\nRun Time\nx x\nLength Width Thickness\n# PcsPart #\nDate & Time\nNotes\nUser data 3\nWeight Dimensions\nMaterial\n10:11:16.0011/30/2023\n00:26:54.37\nSS300 Space Saver Frames\n300SS 1HK 12GA 5'x10'\n120 60 0.109\nMakes 4 Frames\nFR-20522 Fill Scale17 3.025 3.125 x 31.54\nFR-2052216 3.098 3.125 x 31.512\nFR-2002019 5.93 3.125 x 60.254\nFR-2002118 5.947 3.125 x 60.254\nFR-200231 3.218 3 x 348\nFR-20055A11 4.525 3.5 x 41.258\nFR-20055B2 4.525 3.5 x 41.258\nFR-20469C14 1.297 1 x 41.3128\nFR-20157 Bend21 0.582 6.875 x 411\n19\n19\n19\n19\n18\n18\n18\n18\n17 17 17 17 16 16 16 16\n16\n16\n16\n16\n16",
+  "parsed_from_pdf": {
+    "gauge": "12",
+    "sheet_size_ft": {
+      "length": 10.0,
+      "width": 5.0
+    }
+  },
+  "parts": [
+    {
+      "details": "Fill Scale17 3.025 3.125 x 31.54",
+      "dimensions_in": {
+        "length": 3.125,
+        "width": 31.54
+      },
+      "part_number": "FR-20522",
+      "source": "line_scan",
+      "weight_lb": 3.025
+    },
+    {
+      "details": "3.098 3.125 x 31.512",
+      "dimensions_in": {
+        "length": 3.125,
+        "width": 31.512
+      },
+      "part_number": "FR-2052216",
+      "source": "line_scan",
+      "weight_lb": 3.098
+    },
+    {
+      "details": "5.93 3.125 x 60.254",
+      "dimensions_in": {
+        "length": 3.125,
+        "width": 60.254
+      },
+      "part_number": "FR-2002019",
+      "source": "line_scan",
+      "weight_lb": 5.93
+    },
+    {
+      "details": "5.947 3.125 x 60.254",
+      "dimensions_in": {
+        "length": 3.125,
+        "width": 60.254
+      },
+      "part_number": "FR-2002118",
+      "source": "line_scan",
+      "weight_lb": 5.947
+    },
+    {
+      "details": "3.218 3 x 348",
+      "dimensions_in": {
+        "length": 3.0,
+        "width": 348.0
+      },
+      "part_number": "FR-200231",
+      "source": "line_scan",
+      "weight_lb": 3.218
+    },
+    {
+      "details": "4.525 3.5 x 41.258",
+      "dimensions_in": {
+        "length": 3.5,
+        "width": 41.258
+      },
+      "part_number": "FR-20055A11",
+      "source": "line_scan",
+      "weight_lb": 4.525
+    },
+    {
+      "details": "4.525 3.5 x 41.258",
+      "dimensions_in": {
+        "length": 3.5,
+        "width": 41.258
+      },
+      "part_number": "FR-20055B2",
+      "source": "line_scan",
+      "weight_lb": 4.525
+    },
+    {
+      "details": "1.297 1 x 41.3128",
+      "dimensions_in": {
+        "length": 1.0,
+        "width": 41.3128
+      },
+      "part_number": "FR-20469C14",
+      "source": "line_scan",
+      "weight_lb": 1.297
+    },
+    {
+      "details": "Bend21 0.582 6.875 x 411",
+      "dimensions_in": {
+        "length": 6.875,
+        "width": 411.0
+      },
+      "part_number": "FR-20157",
+      "source": "line_scan",
+      "weight_lb": 0.582
+    },
+    {
+      "details": "300 Gal SS Frame",
+      "dimensions_in": null,
+      "part_number": "FR-1302SS",
+      "source": "line_scan",
+      "weight_lb": null
+    },
+    {
+      "details": "1",
+      "dimensions_in": null,
+      "part_number": "FR-20055B",
+      "source": "line_scan",
+      "weight_lb": null
+    },
+    {
+      "details": "UP  90\u00b0  R 1/8\"",
+      "dimensions_in": null,
+      "part_number": "FR-20522",
+      "source": "line_scan",
+      "weight_lb": null
+    }
+  ],
+  "related_files": [
+    {
+      "extension": "mpf",
+      "path": "samples/300SS 1HK.MPF",
+      "relation": "same_station",
+      "station_code": "HK"
+    }
+  ]
+}

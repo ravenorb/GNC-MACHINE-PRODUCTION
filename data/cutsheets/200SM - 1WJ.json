@@ -1,0 +1,86 @@
+{
+  "cutsheet": {
+    "file_name": "200SM - 1WJ.pdf",
+    "file_type": "pdf",
+    "material_hint": "SM",
+    "product": "200SM",
+    "run_number": "1",
+    "source_pdf": "samples/200SM - 1WJ.pdf",
+    "station_code": "WJ"
+  },
+  "extracted_text_excerpt": "2 \"\n1\n60\"\n\"  2\n\n1\n120\"\nSHEET SIZE: TIME (HR):\n505'X10'\nDWG#\n200SM #1WJ 200 SpaceMaker\nDESCRIPTION:REV: SAND (LB):\n220\nSHEET WT (LB): \u2211 PART WT (LB):MATERIAL:\n- 12 GA STAINLESS STEEL 1\u00bd\nFR-20615\nFR-20021\nFR-20033FR-20021\nFR-20614\nFR-20613\nITEM # DESCRIPTION QTY.\nFR-20021 200SM,300SS,400SS End Cap 8\nFR-20023 Leg Cross Member 8\nFR-20033 Riser 8\nFR-20157 Frame Support 14\nFR-20469Z 200SM Strap 4\nFR-20613 Brace Reel Side 200SS 8\nFR-20614 Brace P&E Side 400SS 8\nFR-20615 SS Leg (200 Gallon) 4\nFR-20615 SS Leg (200 Gallon) 12\nDWG#\nFR-1200SM 200 Gal SM Frame Bend Instructions\nDESCRIPTION:REV:\n-\nMATERIAL:\n12 GA STAINLESS STEEL\nWEIGHT: PAGE:\n2 of 2\nUP  90\u00b0\nUP  90\u00b0",
+  "parsed_from_pdf": {
+    "gauge": "12",
+    "sheet_size_ft": null
+  },
+  "parts": [
+    {
+      "description": "200SM,300SS,400SS End Cap",
+      "part_number": "FR-20021",
+      "quantity": 8,
+      "source": "item_table"
+    },
+    {
+      "description": "Leg Cross Member",
+      "part_number": "FR-20023",
+      "quantity": 8,
+      "source": "item_table"
+    },
+    {
+      "description": "Riser",
+      "part_number": "FR-20033",
+      "quantity": 8,
+      "source": "item_table"
+    },
+    {
+      "description": "Frame Support",
+      "part_number": "FR-20157",
+      "quantity": 14,
+      "source": "item_table"
+    },
+    {
+      "description": "200SM Strap",
+      "part_number": "FR-20469Z",
+      "quantity": 4,
+      "source": "item_table"
+    },
+    {
+      "description": "Brace Reel Side 200SS",
+      "part_number": "FR-20613",
+      "quantity": 8,
+      "source": "item_table"
+    },
+    {
+      "description": "Brace P&E Side 400SS",
+      "part_number": "FR-20614",
+      "quantity": 8,
+      "source": "item_table"
+    },
+    {
+      "description": "SS Leg (200 Gallon)",
+      "part_number": "FR-20615",
+      "quantity": 4,
+      "source": "item_table"
+    },
+    {
+      "description": "SS Leg (200 Gallon)",
+      "part_number": "FR-20615",
+      "quantity": 12,
+      "source": "item_table"
+    }
+  ],
+  "related_files": [
+    {
+      "extension": "pdf",
+      "path": "samples/200SM 1HK.pdf",
+      "relation": "same_product",
+      "station_code": "HK"
+    },
+    {
+      "extension": "mpf",
+      "path": "samples/200SM 1HK.MPF",
+      "relation": "same_product",
+      "station_code": "HK"
+    }
+  ]
+}

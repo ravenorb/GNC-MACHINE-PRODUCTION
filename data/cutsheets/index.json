@@ -1,0 +1,22 @@
+[
+  {
+    "cutsheet_metadata": "data/cutsheets/100_200SS 2HK.json",
+    "product": "100_200SS",
+    "station_code": "HK"
+  },
+  {
+    "cutsheet_metadata": "data/cutsheets/200SM - 1WJ.json",
+    "product": "200SM",
+    "station_code": "WJ"
+  },
+  {
+    "cutsheet_metadata": "data/cutsheets/200SM 1HK.json",
+    "product": "200SM",
+    "station_code": "HK"
+  },
+  {
+    "cutsheet_metadata": "data/cutsheets/300SS 1HK.json",
+    "product": "300SS",
+    "station_code": "HK"
+  }
+]
