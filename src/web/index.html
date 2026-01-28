@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Production Manager</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div>
+          <p class="app__eyebrow">GNC Industries</p>
+          <h1>Production Manager</h1>
+          <p class="app__subtitle">Browse cut sheets, inspect part metadata, and access program files.</p>
+        </div>
+        <div class="app__status" id="status">Loading cutsheets…</div>
+      </header>
+
+      <main class="app__main">
+        <section class="panel">
+          <div class="panel__header">
+            <h2>Runnable Parts</h2>
+            <p>Pick a product to view parsed PDF metadata and related program files.</p>
+          </div>
+          <div class="panel__body" id="parts-list">
+            <div class="panel__empty">No cutsheets loaded yet.</div>
+          </div>
+        </section>
+
+        <section class="panel panel--detail">
+          <div class="panel__header">
+            <h2>Cut Sheet Detail</h2>
+            <p id="detail-subtitle">Select a cut sheet to view metadata.</p>
+          </div>
+          <div class="panel__body" id="detail-view">
+            <div class="panel__empty">No cut sheet selected.</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -12,3 +12,10 @@ The initial cutsheet metadata database lives in `data/cutsheets` and is generate
 python -m pip install -r requirements.txt
 python scripts/parse_cutsheets.py
 ```
+
+## Production Manager Web UI
+Run the lightweight web interface (served from port 80 by default):
+
+```sh
+python src/server.py --port 80
+```
