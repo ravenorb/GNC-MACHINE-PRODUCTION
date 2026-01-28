@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "product": "200SM",
+      "stations": [
+        {
+          "station_type": "HK laser",
+          "files": [
+            {
+              "file_type": "MPF",
+              "path": "samples/200SM 1HK.MPF"
+            },
+            {
+              "file_type": "PDF",
+              "path": "samples/200SM 1HK.pdf"
+            }
+          ]
+        },
+        {
+          "station_type": "WJ waterjet",
+          "files": [
+            {
+              "file_type": "PDF",
+              "path": "samples/200SM - 1WJ.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product": "300SS",
+      "stations": [
+        {
+          "station_type": "HK laser",
+          "files": [
+            {
+              "file_type": "MPF",
+              "path": "samples/300SS 1HK.MPF"
+            },
+            {
+              "file_type": "PDF",
+              "path": "samples/300SS 1HK.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product": "100_200SS",
+      "stations": [
+        {
+          "station_type": "HK laser",
+          "files": [
+            {
+              "file_type": "MPF",
+              "path": "samples/100_200SS 2HK.MPF"
+            },
+            {
+              "file_type": "PDF",
+              "path": "samples/100_200SS 2HK.pdf"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
