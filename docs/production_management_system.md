@@ -76,6 +76,28 @@ Establish a web-based production management system for GNC Industries, Inc. that
 - Link parsed metadata to program files and job numbers.
 - Store extracted data for scheduling and inventory reporting.
 
+## Parsing Expectations for Sample Files
+Use the sample filenames as the initial source of truth for metadata extraction until PDF/MPF content parsing is implemented. The parser should extract the following fields for every sample file:
+- **Product name** (leading token before the station code).
+- **Station** (station code in filename, e.g., `HK`, `WJ`).
+- **Gauge/material hints** (suffix tokens embedded in the product name, captured as-is).
+- **File type** (file extension such as `.pdf` or `.mpf`).
+- **Program family** (station code, stored separately to allow grouping).
+
+| Sample filename | Product name | Station | Gauge/material hints | File type | Program family |
+| --- | --- | --- | --- | --- | --- |
+| `100_200SS 2HK.pdf` | `100_200SS` | `HK` | `SS` | `pdf` | `HK` |
+| `100_200SS 2HK.MPF` | `100_200SS` | `HK` | `SS` | `mpf` | `HK` |
+| `200SM 1HK.pdf` | `200SM` | `HK` | `SM` | `pdf` | `HK` |
+| `200SM 1HK.MPF` | `200SM` | `HK` | `SM` | `mpf` | `HK` |
+| `200SM - 1WJ.pdf` | `200SM` | `WJ` | `SM` | `pdf` | `WJ` |
+| `300SS 1HK.pdf` | `300SS` | `HK` | `SS` | `pdf` | `HK` |
+| `300SS 1HK.MPF` | `300SS` | `HK` | `SS` | `mpf` | `HK` |
+
+## TODO
+- Define filename parsing rules for sample files (see [Parsing Expectations for Sample Files](#parsing-expectations-for-sample-files)).
+- Confirm whether material hints (e.g., `SS`, `SM`) should be normalized or stored verbatim.
+
 ## Repository Structure (Proposed)
 ```
 /docs
