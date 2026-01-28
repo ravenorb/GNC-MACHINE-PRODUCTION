@@ -1,0 +1,140 @@
+{
+  "cutsheet": {
+    "file_name": "100_200SS 2HK.pdf",
+    "file_type": "pdf",
+    "material_hint": "SS",
+    "product": "100_200SS",
+    "run_number": "2",
+    "source_pdf": "samples/100_200SS 2HK.pdf",
+    "station_code": "HK"
+  },
+  "extracted_text_excerpt": "#\nFile Name\nRun Time\nx x\nLength Width Thickness\n# PcsPart #\nDate & Time\nNotes\nUser data 3\nWeight Dimensions\nMaterial\n16:30:03.002/12/2025\n00:29:52.73\nSSMake 3 Complete Frames\n100_200SS 2HK 12GA 5'x10'\n120 60 0.109\n100/200SS Frames w/extra P&E Holes\nFR-20098A3 6.695 60.875 x 3.56\nFR-20098B Green Group21 6.66 3.5 x 60.8756\nFR-20469F11 1.903 1 x 60.56\nFR-2006217 2.635 3 x 27.8126\nFR-20095B16 5.327 3.125 x 546\nFR-20115D15 3.039 1.875 x 53.12512\nFR-2006118 2.544 3.125 x 25.8759\nFR-20061 100SSFillScale20 2.488 3.125 x 25.8753\nFR-20157 Bend19 0.582 6.875 x 414\n3\n3\n3\n3\n3\n3\n16\n16\n16\n16\n16\n16\n15\n15",
+  "parsed_from_pdf": {
+    "gauge": "12",
+    "sheet_size_ft": {
+      "length": 10.0,
+      "width": 5.0
+    }
+  },
+  "parts": [
+    {
+      "details": "6.695 60.875 x 3.56",
+      "dimensions_in": {
+        "length": 60.875,
+        "width": 3.56
+      },
+      "part_number": "FR-20098A3",
+      "source": "line_scan",
+      "weight_lb": 6.695
+    },
+    {
+      "details": "Green Group21 6.66 3.5 x 60.8756",
+      "dimensions_in": {
+        "length": 3.5,
+        "width": 60.8756
+      },
+      "part_number": "FR-20098B",
+      "source": "line_scan",
+      "weight_lb": 6.66
+    },
+    {
+      "details": "1.903 1 x 60.56",
+      "dimensions_in": {
+        "length": 1.0,
+        "width": 60.56
+      },
+      "part_number": "FR-20469F11",
+      "source": "line_scan",
+      "weight_lb": 1.903
+    },
+    {
+      "details": "2.635 3 x 27.8126",
+      "dimensions_in": {
+        "length": 3.0,
+        "width": 27.8126
+      },
+      "part_number": "FR-2006217",
+      "source": "line_scan",
+      "weight_lb": 2.635
+    },
+    {
+      "details": "5.327 3.125 x 546",
+      "dimensions_in": {
+        "length": 3.125,
+        "width": 546.0
+      },
+      "part_number": "FR-20095B16",
+      "source": "line_scan",
+      "weight_lb": 5.327
+    },
+    {
+      "details": "3.039 1.875 x 53.12512",
+      "dimensions_in": {
+        "length": 1.875,
+        "width": 53.12512
+      },
+      "part_number": "FR-20115D15",
+      "source": "line_scan",
+      "weight_lb": 3.039
+    },
+    {
+      "details": "2.544 3.125 x 25.8759",
+      "dimensions_in": {
+        "length": 3.125,
+        "width": 25.8759
+      },
+      "part_number": "FR-2006118",
+      "source": "line_scan",
+      "weight_lb": 2.544
+    },
+    {
+      "details": "100SSFillScale20 2.488 3.125 x 25.8753",
+      "dimensions_in": {
+        "length": 3.125,
+        "width": 25.8753
+      },
+      "part_number": "FR-20061",
+      "source": "line_scan",
+      "weight_lb": 2.488
+    },
+    {
+      "details": "Bend19 0.582 6.875 x 414",
+      "dimensions_in": {
+        "length": 6.875,
+        "width": 414.0
+      },
+      "part_number": "FR-20157",
+      "source": "line_scan",
+      "weight_lb": 0.582
+    },
+    {
+      "details": "100/200 Split Frame",
+      "dimensions_in": null,
+      "part_number": "FR-1300SB",
+      "source": "line_scan",
+      "weight_lb": null
+    },
+    {
+      "details": "1\"",
+      "dimensions_in": null,
+      "part_number": "FR-20033",
+      "source": "line_scan",
+      "weight_lb": null
+    },
+    {
+      "details": "FILL SCALE LEG BEND AS SHOWN",
+      "dimensions_in": null,
+      "part_number": "FR-20061",
+      "source": "line_scan",
+      "weight_lb": null
+    }
+  ],
+  "related_files": [
+    {
+      "extension": "mpf",
+      "path": "samples/100_200SS 2HK.MPF",
+      "relation": "same_station",
+      "station_code": "HK"
+    }
+  ]
+}
