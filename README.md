@@ -3,3 +3,4 @@ GNC Industries, Inc. production management system for machine shop scheduling, s
 
 ## Documentation
 - [Production management system plan](docs/production_management_system.md)
+- [Sample asset TODOs](docs/todos.md)
