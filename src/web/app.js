@@ -64,6 +64,20 @@ const buildDetailCard = (title, value) => {
   return card;
 };
 
+const buildSection = (title) => {
+  const section = document.createElement("section");
+  section.className = "detail-section";
+  const header = document.createElement("div");
+  header.className = "detail-section__header";
+  const heading = document.createElement("h3");
+  heading.textContent = title;
+  header.appendChild(heading);
+  const body = document.createElement("div");
+  body.className = "detail-section__body";
+  section.append(header, body);
+  return { section, body };
+};
+
 const renderDetail = (data) => {
   detailViewEl.innerHTML = "";
 
@@ -72,26 +86,54 @@ const renderDetail = (data) => {
     return;
   }
 
-  const { cutsheet, parsed_from_pdf: parsed, parts, related_files: relatedFiles, extracted_text_excerpt: excerpt } = data;
+  const { cutsheet, parsed_from_pdf: parsed, parts, related_files: relatedFiles } = data;
 
-  detailSubtitleEl.textContent = `${cutsheet.product} · Station ${cutsheet.station_code}`;
+  detailSubtitleEl.textContent = `${cutsheet.product} · Station ${cutsheet.station_code} · Run ${cutsheet.run_number || "—"}`;
 
-  const grid = document.createElement("div");
-  grid.className = "detail-grid";
-  grid.append(
+  const overview = buildSection("Program Overview");
+  const overviewGrid = document.createElement("div");
+  overviewGrid.className = "detail-grid";
+  overviewGrid.append(
     buildDetailCard("Product", cutsheet.product),
     buildDetailCard("Station", cutsheet.station_code),
-    buildDetailCard("Run", cutsheet.run_number),
-    buildDetailCard("Material Hint", cutsheet.material_hint),
-    buildDetailCard("File Type", cutsheet.file_type),
+    buildDetailCard("Run #", cutsheet.run_number),
+    buildDetailCard("File Name", parsed?.file_name || cutsheet.file_name),
+    buildDetailCard("Run Time", parsed?.run_time),
+    buildDetailCard("Created", parsed?.date_time)
+  );
+  overview.body.appendChild(overviewGrid);
+
+  const material = buildSection("Material");
+  const materialGrid = document.createElement("div");
+  materialGrid.className = "detail-grid";
+  materialGrid.append(
+    buildDetailCard("Material Type", parsed?.material_type),
     buildDetailCard("Gauge", parsed?.gauge ? `${parsed.gauge} GA` : "—"),
     buildDetailCard(
       "Sheet Size",
       parsed?.sheet_size_ft
         ? `${parsed.sheet_size_ft.width} ft × ${parsed.sheet_size_ft.length} ft`
         : "—"
+    ),
+    buildDetailCard(
+      "Raw Dimensions",
+      parsed?.sheet_dimensions_in
+        ? `${formatNumber(parsed.sheet_dimensions_in.length)} × ${formatNumber(
+            parsed.sheet_dimensions_in.width
+          )} × ${formatNumber(parsed.sheet_dimensions_in.thickness)} in`
+        : "—"
     )
   );
+  material.body.appendChild(materialGrid);
+
+  const notes = buildSection("Production Notes");
+  const notesGrid = document.createElement("div");
+  notesGrid.className = "detail-grid";
+  notesGrid.append(
+    buildDetailCard("Part Description", parsed?.user_data_3),
+    buildDetailCard("Notes / Frame Qty", parsed?.notes)
+  );
+  notes.body.appendChild(notesGrid);
 
   const links = document.createElement("div");
   links.className = "detail-links";
@@ -113,11 +155,33 @@ const renderDetail = (data) => {
     });
   }
 
+  const equipmentValues = [parsed?.company_name, parsed?.machine_type, parsed?.software_used].filter(
+    (value) => value
+  );
+  let equipmentSection = null;
+  if (equipmentValues.length) {
+    const equipment = buildSection("Equipment");
+    const equipmentGrid = document.createElement("div");
+    equipmentGrid.className = "detail-grid";
+    equipmentGrid.append(
+      buildDetailCard("Company", parsed?.company_name),
+      buildDetailCard("Machine", parsed?.machine_type),
+      buildDetailCard("Software", parsed?.software_used)
+    );
+    equipment.body.appendChild(equipmentGrid);
+    equipmentSection = equipment.section;
+  }
+
   const partsSection = document.createElement("div");
-  partsSection.className = "detail-card";
-  const partsHeader = document.createElement("h3");
-  partsHeader.textContent = "Parts";
+  partsSection.className = "detail-section";
+  const partsHeader = document.createElement("div");
+  partsHeader.className = "detail-section__header";
+  const partsTitle = document.createElement("h3");
+  partsTitle.textContent = "Nested Parts";
+  partsHeader.appendChild(partsTitle);
   partsSection.appendChild(partsHeader);
+  const partsBody = document.createElement("div");
+  partsBody.className = "detail-section__body";
 
   if (parts?.length) {
     const table = document.createElement("table");
@@ -126,46 +190,35 @@ const renderDetail = (data) => {
       <thead>
         <tr>
           <th>Part #</th>
-          <th>Details</th>
-          <th>Weight (lb)</th>
-          <th>Dimensions (in)</th>
+          <th># Pcs</th>
         </tr>
       </thead>
       <tbody>
         ${parts
           .map((part) => {
-            const dims = part.dimensions_in
-              ? `${formatNumber(part.dimensions_in.width)} × ${formatNumber(part.dimensions_in.length)}`
-              : "—";
             return `
               <tr>
                 <td>${part.part_number || "—"}</td>
-                <td>${part.details || "—"}</td>
-                <td>${formatNumber(part.weight_lb)}</td>
-                <td>${dims}</td>
+                <td>${formatNumber(part.quantity)}</td>
               </tr>
             `;
           })
           .join("")}
       </tbody>
     `;
-    partsSection.appendChild(table);
+    partsBody.appendChild(table);
   } else {
     const empty = document.createElement("p");
     empty.textContent = "No part rows parsed from the PDF yet.";
-    partsSection.appendChild(empty);
+    partsBody.appendChild(empty);
   }
+  partsSection.appendChild(partsBody);
 
-  const excerptSection = document.createElement("div");
-  excerptSection.className = "detail-card";
-  const excerptTitle = document.createElement("h3");
-  excerptTitle.textContent = "Extracted Text Excerpt";
-  const excerptBlock = document.createElement("pre");
-  excerptBlock.className = "excerpt";
-  excerptBlock.textContent = excerpt || "No excerpt available.";
-  excerptSection.append(excerptTitle, excerptBlock);
-
-  detailViewEl.append(grid, links, partsSection, excerptSection);
+  detailViewEl.append(overview.section, material.section, notes.section, links);
+  if (equipmentSection) {
+    detailViewEl.appendChild(equipmentSection);
+  }
+  detailViewEl.appendChild(partsSection);
 };
 
 const selectCutsheet = async (metadataPath) => {
