@@ -19,3 +19,19 @@ Run the lightweight web interface (served from port 80 by default):
 ```sh
 python src/server.py --port 80
 ```
+
+## Docker
+Build and run with Docker Compose:
+
+```sh
+docker compose up -d --build
+```
+
+Then visit http://localhost:8080.
+
+To run with plain Docker:
+
+```sh
+docker build -t gnc-machine-production .
+docker run -d --name gnc-machine-production -p 8080:8000 gnc-machine-production
+```
